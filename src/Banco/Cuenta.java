@@ -13,8 +13,10 @@ import java.util.ArrayList;
  */
 public class Cuenta {
     private int i;
+    private int j;
     private int numeroCuenta;
     private double saldoActual;
+    private double saldo[];
     private String fechaCreacion;
     private String nombreCliente;
     private ArrayList<Movimiento> movimiento;
@@ -25,6 +27,8 @@ public class Cuenta {
         this.fechaCreacion = fechaCreacion;
         this.nombreCliente = nombreCliente;
         this.movimiento = new ArrayList<Movimiento>();
+        saldo = new double[3];
+        this.saldo[0] = saldoActual;
     }
     
     public int getNumeroCuenta() {
@@ -55,6 +59,14 @@ public class Cuenta {
         return nombreCliente;
     }
 
+    public double[] getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double[] saldo) {
+        this.saldo = saldo;
+    }
+
     public void setNombreCliente(String nombreCliente) {
         this.nombreCliente = nombreCliente;
     }
@@ -72,9 +84,13 @@ public class Cuenta {
     }
     
     public void deposito(){
-        saldoActual = (movimiento.get(i).getSaldoAnterior()+ movimiento.get(i).getCantidad());
+        saldo[j+1] = ((saldo[j]) + (movimiento.get(i).getCantidad()));
+        i++;
+        j++;
     }
     public void retiro(){
-        saldoActual = (movimiento.get(i).getSaldoAnterior()- movimiento.get(i).getCantidad());
+        saldo[j+1] = ((saldo[j]) - (movimiento.get(i).getCantidad()));
+        i++;
+        j++;
     }
 }

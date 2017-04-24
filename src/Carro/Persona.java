@@ -21,7 +21,7 @@ public class Persona {
         this.nombre = nombre;
         this.cedula = cedula;
         this.telefono = telefono;
-        this.c=new ArrayList<Carro>();
+        this.c = new ArrayList<Carro>();
     }
 
     public String getNombre() {

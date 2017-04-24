@@ -57,11 +57,12 @@ public class Banco {
             System.out.println("Numero de cuenta: " + cuenta.get(i).getNumeroCuenta());
             System.out.println("Nombre cliente: "+ cuenta.get(i).getNombreCliente());
             System.out.println("Fecha de creación: "+ cuenta.get(i).getFechaCreacion());
-            System.out.println("Saldo Anterior: "+ cuenta.get(i).getMovimiento().get(i).getSaldoAnterior());
-            for(int j = 0; j<2;j++){
-                System.out.println("Transacción: "+cuenta.get(i).getMovimiento().get(i).getTipo().getNombre()+" Codigo: "+cuenta.get(i).getMovimiento().get(i).getTipo().getCodigo());
-                System.out.println("Cantidad: "+ cuenta.get(i).getMovimiento().get(i).getCantidad());
-                System.out.println("Saldo Actual: "+ cuenta.get(i).getSaldoActual());
+            System.out.println("Saldo Actual: "+ cuenta.get(i).getSaldoActual());
+            for(int j = 0; j<2; j++){
+                System.out.println("Transacción: "+cuenta.get(i).getMovimiento().get(j).getTipo().getNombre()+" Codigo: "+cuenta.get(i).getMovimiento().get(j).getTipo().getCodigo());
+                System.out.println("Cantidad: "+ cuenta.get(i).getMovimiento().get(j).getCantidad());
+                System.out.println("Saldo Anterior: "+ cuenta.get(i).getSaldo()[j]);
+                System.out.println("Saldo Actual: "+ cuenta.get(i).getSaldo()[j+1]);
             }
         }
     }

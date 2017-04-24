@@ -9,13 +9,12 @@ import java.util.ArrayList;
 
 public class Movimiento {
     private String fecha;
-    double saldoAnterior[];
     private double cantidad;
-    private Tipo tipo;
+    private Tipo tipo;   
     int i = 0;
-    public Movimiento(String fecha, double saldoAnterior, double cantidad, Tipo tipo) {
+    
+    public Movimiento(String fecha, double cantidad, Tipo tipo) {
         this.fecha = fecha;
-        this.saldoAnterior[i] = saldoAnterior;
         this.cantidad = cantidad;
         this.tipo = tipo;
     }
@@ -26,14 +25,6 @@ public class Movimiento {
 
     public void setFecha(String fecha) {
         this.fecha = fecha;
-    }
-
-    public double[] getSaldoAnterior() {
-        return saldoAnterior;
-    }
-
-    public void setSaldoAnterior(double[] saldoAnterior) {
-        this.saldoAnterior = saldoAnterior;
     }
 
     public double getCantidad() {
@@ -51,10 +42,10 @@ public class Movimiento {
     public void setTipo(Tipo tipo) {
         this.tipo = tipo;
     }
-    
+
     @Override
     public String toString() {
-        return "Movimiento{" + "fecha=" + fecha + ", saldoAnterior=" + saldoAnterior + ", cantidad=" + cantidad + ", tipo=" + tipo + '}';
+        return "Movimiento{" + "fecha=" + fecha + ", cantidad=" + cantidad + ", tipo=" + tipo + ", i=" + i + '}';
     }
     
 }

@@ -33,10 +33,5 @@ public class Tipo{
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
-
-    @Override
-    public String toString() {
-        return "Tipo{" + "nombre=" + nombre + ", codigo=" + codigo + '}';
-    }
     
 }
