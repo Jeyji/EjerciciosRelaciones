@@ -19,4 +19,18 @@ public class Perro extends Mascota{
     public void sonido(){
         System.out.println("Guau");
     }
+
+    public String getRaza() {
+        return raza;
+    }
+
+    public void setRaza(String raza) {
+        this.raza = raza;
+    }
+
+    @Override
+    public String mostrarInfo() {
+        return this.raza + "" ;
+    }
+    
 }

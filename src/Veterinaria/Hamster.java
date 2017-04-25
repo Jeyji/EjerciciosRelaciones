@@ -28,4 +28,9 @@ public class Hamster extends Mascota{
     public void sonido(){
         System.out.println("Sniff");
     }
+
+    @Override
+    public String mostrarInfo() {
+        return this.peso + "" ;
+    }
 }

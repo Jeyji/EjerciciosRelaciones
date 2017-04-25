@@ -9,7 +9,7 @@ package Veterinaria;
  *
  * @author JHOJAN
  */
-public class Mascota {
+public abstract class Mascota {
     protected String id;
     protected String nombre;
     protected String colorPelo;
@@ -47,4 +47,5 @@ public class Mascota {
     public void sonido(){
         System.out.println("****");
     }
+    public abstract String mostrarInfo();
 }

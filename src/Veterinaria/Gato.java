@@ -19,4 +19,18 @@ public class Gato extends Mascota{
     public void sonido(){
         System.out.println("Miau");
     }
+
+    public double getCazador() {
+        return cazador;
+    }
+
+    public void setCazador(double cazador) {
+        this.cazador = cazador;
+    }
+
+    
+    @Override
+    public String mostrarInfo() {
+        return this.cazador + "" ;
+    }
 }

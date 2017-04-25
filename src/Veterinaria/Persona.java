@@ -54,7 +54,8 @@ public class Persona {
             System.out.println("Nombre de la Mascota: "+mascota.get(i).getNombre());
             System.out.println("Numero de identificación: "+mascota.get(i).getId());
             System.out.println("Color del Pelo: "+mascota.get(i).getColorPelo());
-            System.out.println("Sonido: "+ mascota.get(i).sonido());
+            mascota.get(i).sonido();
+            mascota.get(i).mostrarInfo();
         }
     }
 }
